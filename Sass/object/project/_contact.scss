@@ -1,0 +1,132 @@
+.p-contact {
+  // background-color: $base-color;
+  background-image: url(/image/bckground-image-contact.png);
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 96px;
+  @include breakpoint(tablet) {
+    padding-bottom: 76px;
+  }
+  &__title {
+    position: relative;
+
+    padding: 80px 21px 0 21px;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 80px;
+    @include breakpoint(tablet) {
+      justify-content: center;
+      margin-top: 0;
+      padding-top: 70px;
+    }
+    h2 {
+      position: relative;
+      font-family: "lato";
+      font-weight: bold;
+      font-size: 32px;
+      color: #fff;
+      @include breakpoint(tablet) {
+        font-size: 48px;
+      }
+    }
+    span {
+      position: relative;
+      font-size: 30px;
+      color: #fff;
+      padding: 0 8px;
+      @include breakpoint(tablet) {
+        font-size: 40px;
+      }
+    }
+    h3 {
+      position: relative;
+      font-size: 20px;
+      color: #fff;
+      font-family: "Noto Sans JP ";
+      @include breakpoint(tablet) {
+        font-size: 24px;
+      }
+    }
+  }
+  p {
+    font-family: "Noto Sans JP ";
+    font-size: 16px;
+    line-height: 2;
+    color: #fff;
+    margin-top: 24px;
+    padding: 0 20px;
+    
+    br {
+      display: none;
+    }
+    @include breakpoint(tablet) {
+      text-align: center;
+      margin-top: 28px;
+      br {
+        display: block;
+      }
+    }
+  }
+  
+  img {
+    @include breakpoint(tablet) {
+    padding-left: 40px;
+    }
+  }
+  &__wrap {
+    @include breakpoint(tablet) {
+      display: flex;
+      justify-content: center;
+      gap: 4.5%;
+      margin-top: 56px;
+    }
+  }
+  .c-button {
+    font-family: "Noto Sans JP ";
+    background-color: #b8614b;
+    width: 345px;
+    margin: 24px auto 0 auto;
+
+    height: 48px;
+
+    display: block;
+    @include breakpoint(tablet) {
+      width: 321px;
+      margin: 0;
+      height: 72px;
+    }
+
+    a {
+      justify-content: space-around;
+      align-items: center;
+      display: flex;
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+  .c-button__2 {
+    font-family: "Noto Sans JP ";
+    background-color: $text-color;
+    width: 345px;
+    margin: 24px auto 0 auto;
+
+    height: 48px;
+    // margin-top: 24px;
+    // margin-bottom: 96px;
+    display: block;
+    @include breakpoint(tablet) {
+      width: 321px;
+      margin: 0;
+      height: 72px;
+    }
+    a {
+      justify-content: space-around;
+      align-items: center;
+      display: flex;
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+}

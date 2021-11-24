@@ -1,0 +1,72 @@
+.p-header {
+  font-family: "Noto Sans JP ";
+  // padding: 0 20px;
+
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  height: 56px;
+  z-index: 1000;
+  // background-color: $base-color;
+  @include breakpoint(tablet) {
+    display: flex;
+    height: 80px;
+  }
+  .c-img__2 {
+    display: none;
+  }
+  &.scroll-nav {
+    background-color: #fff;
+    .p-global__menu__list li {
+      &::after {
+        background-color: #191919;
+      }
+      a {
+        color: #191919;
+      }
+    }
+    .c-img__1 {
+      display: none;
+    }
+    .c-img__2 {
+      display: block;
+    }
+    .p-hamburger {
+      span {
+        background-color: #191919;
+      }
+      &::after {
+        background-color: #191919;
+      }
+      &::before {
+        background-color: #191919;
+      }
+    }
+  }
+
+  &__left {
+    height: 100%;
+    width: 100%;
+    padding-left: 1%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    @include breakpoint(tablet) {
+      width: auto;
+    }
+    img {
+      width: 120px;
+      height: 26px;
+      align-items: center;
+
+      @include breakpoint(tablet) {
+        margin-left: 20px;
+        height: 29px;
+        width: 136px;
+      }
+    }
+  }
+}

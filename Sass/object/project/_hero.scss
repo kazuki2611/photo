@@ -1,0 +1,166 @@
+.p-hero {
+  position: relative;
+  // z-index: -10;
+  width: 100%;
+  // height: 611px;
+  height: 666px;
+  // padding-top: 80px;
+  overflow-y: hidden;
+  @include breakpoint(tablet) {
+    height: 768px;
+  }
+  .c-img1 {
+    width: 100%;
+    object-fit: cover;
+    height: 668px;
+    // display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    @include breakpoint(tablet) {
+      height: 100%;
+    }
+  }
+  // .c-img2 {
+  //   display: none !important;
+  //   @include breakpoint(tablet) {
+  //     display: block;
+  //     width: 100%;
+  //     // height: 611px;
+  //     height: 688px;
+  //     position: absolute;
+  //     object-fit: cover;
+  //     top: 80px;
+
+  //     left: 0;
+  //   }
+  // }
+  // .c-img3 {
+  //   position: absolute;
+  //   top: 80px;
+  //   left: 0;
+  //   display: block;
+  //   width: 100%;
+  //   height: 611px;
+  //   object-fit: cover;
+
+  //   @include breakpoint(tablet) {
+  //     display: none;
+  //   }
+  // }
+  h1 {
+    position: absolute;
+    top: 23%;
+    left: 20px;
+    font-size: 48px;
+    // color: #fff;
+    font-family: "lato";
+    font-weight: 900;
+    color: #fff;
+    z-index: 99;
+    @include breakpoint(tablet) {
+      font-size: 70px;
+      line-height: 1.1;
+      top: 25%;
+      left: 13%;
+    }
+    @include breakpoint (pc) {
+      font-size: 96px;
+    }
+  }
+  &__box {
+    position: absolute;
+    width: 208px;
+    top: 53.2%;
+    left: 14px;
+    display: block;
+
+    // transform: skew(-10deg);
+    z-index: 99;
+    padding: 3px 0 3px 15px;
+    @include breakpoint(tablet) {
+      width: 318px;
+
+      height: 64px;
+      left: 14%;
+      top: 55%;
+    }
+    &::before {
+      text-align: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 20px;
+      right: 0;
+      z-index: -1; /* 親要素の後ろに来るように-1 */
+      transform: skew(-40deg);
+      content: ""; /*ボックスを作る*/
+      background-color: #fff;
+    }
+    .c-text {
+      color: #182848;
+
+      // background-color: blue;
+      font-size: 19.73px;
+      font-family: "Noto Sans JP ";
+      font-weight: bold;
+      // transform: skew(25deg);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include breakpoint(tablet) {
+        font-size: 32px;
+
+        padding-left: 20px;
+      }
+    }
+    &__2 {
+      @extend.p-hero__box;
+      top: 60%;
+      width: 300px;
+      left: 14px;
+      @include breakpoint(tablet) {
+        width: 486px;
+        left: 14%;
+        top: 66%;
+      }
+    }
+    &__shadow {
+      @extend.p-hero__box;
+      left: 16px;
+      top: 53.5%;
+      height: 36px;
+      z-index: 1;
+      @include breakpoint(tablet) {
+        height: 60px;
+        left: 14%;
+        top: 55.8%;
+      }
+      &::before {
+        @extend.p-hero__box::before;
+        background-color: #182848;
+      }
+      &__2 {
+        @extend.p-hero__box__shadow;
+        top: 60.6%;
+        width: 300px;
+        left: 16px;
+        height: 34px;
+        @include breakpoint(tablet) {
+          width: 486px;
+          height: 60px;
+          top: 66.8%;
+          left: 14%;
+        }
+        &::before {
+          @extend.p-hero__box__shadow::before;
+        }
+      }
+    }
+  }
+}
+.swiper-container {
+  z-index: 1000;
+}

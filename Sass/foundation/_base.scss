@@ -1,0 +1,25 @@
+body {
+  font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3","游ゴシック体";
+  width: 100%;
+  overflow-x:hidden ;
+ 
+//  padding: 0 20px;
+  
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+html {
+  scroll-behavior: smooth;
+  
+  font-family: "Noto Sans JP ", "lato";
+  overflow-x:hidden ;
+  &.is-open {
+    
+    overflow-y: hidden;
+  }
+}
