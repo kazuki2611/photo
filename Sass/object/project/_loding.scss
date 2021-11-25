@@ -1,0 +1,197 @@
+// #loadingWrap {
+//   width: 100%;
+//   height: 100vh;
+//   background: #000;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 10;
+// }
+
+// #loading {
+//   width: 5em;
+//   height: 5em;
+//   border-top: 1em solid rgba(255, 255, 255, 0.2);
+//   border-right: 1em solid rgba(255, 255, 255, 0.2);
+//   border-bottom: 1em solid rgba(255, 255, 255, 0.2);
+//   border-left: 1em solid rgba(255, 255, 255, 1);
+//   animation: loaderAnime 1s infinite linear;
+//   border-radius: 50%;
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   margin: auto;
+//   z-index: 10;
+// }
+
+// @keyframes loaderAnime {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
+
+// .loadingNone {
+//   animation: loadingAnime 1s forwards;
+// }
+
+// @keyframes loadingAnime {
+//   0% {
+//     opacity: 1;
+//   }
+//   99% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 0;
+//     display: none;
+//   }
+// }
+// #loading {
+//   width: 100vw;
+//   height: 100vh;
+//   transition: all 1s;
+//   background-color: #4b6cb7;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 9999;
+// }
+// .spinner {
+//   width: 100px;
+//   height: 100px;
+//   margin: 200px auto;
+//   background-color: #fff;
+//   border-radius: 100%;
+//   animation: sk-scaleout 1.0s infinite ease-in-out;
+// }
+// /* Loading Animation */
+// @keyframes sk-scaleout {
+//   0% {
+//     transform: scale(0);
+//   } 100% {
+//     transform: scale(1.0);
+//     opacity: 0;
+//   }
+// }
+
+// /* Hide Loading Block */
+// .loaded {
+//   opacity: 0;
+//   visibility: hidden;
+// }
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  width: 120px;
+  height: 120px;
+}
+ 
+/* Loading テキスト */
+.spinner span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 12px;
+}
+.spinner.type1 {
+  border-radius: 50%;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #fff rgba(255, 255, 255, 0.12) rgba(255, 255, 255, 0.12);
+  /* ローディング要素のアニメーションを指定 */
+  -webkit-animation: spinner1_1 1.5s infinite linear forwards;
+          animation: spinner1_1 1.5s infinite linear forwards;
+}
+.spinner.type1 span {
+  /* Loading テキストのアニメーションを指定 */
+  animation: spinner_loading_text 1.5s infinite linear forwards reverse;
+}
+ 
+/* ローディング要素のアニメーション内容 */
+@-webkit-keyframes spinner1_1 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+ 
+@keyframes spinner1_1 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+ 
+/* Loading テキストのアニメーション内容 */
+@-webkit-keyframes spinner_loading_text {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+            transform: translate(-50%, -50%) rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes spinner_loading_text {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+            transform: translate(-50%, -50%) rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  -webkit-transition: all 1.2s ease; /* 1.2秒でフェードアウト */
+          transition: all 1.2s ease;
+  color: #fff; /* ローディングアニメーションカラー */
+  background-color: #4b6cb7; /* 背景カラー */
+}
+.box.loaded{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+

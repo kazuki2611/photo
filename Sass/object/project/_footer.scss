@@ -2,8 +2,10 @@
   background-color: #182848;
   font-family: "Noto Sans JP ";
   padding-top: 10px;
-
+  // pointer-events: none;
   a {
+    // pointer-events: none;
+    cursor: pointer;
     color: #fff;
     text-decoration: none;
     font-size: 14px;
