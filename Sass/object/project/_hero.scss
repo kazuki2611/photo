@@ -59,13 +59,17 @@
     font-weight: 900;
     color: #fff;
     z-index: 99;
+    
+
+    text-shadow: 4.243px 4.243px 4px rgba(24, 40, 72, 0.5);
+
     @include breakpoint(tablet) {
       font-size: 70px;
       line-height: 1.1;
       top: 25%;
       left: 13%;
     }
-    @include breakpoint (pc) {
+    @include breakpoint(pc) {
       font-size: 96px;
     }
   }
@@ -103,7 +107,7 @@
 
       // background-color: blue;
       font-size: 19.73px;
-      font-family: "Noto Sans JP ";
+      font-family: "Noto Sans JP";
       font-weight: bold;
       // transform: skew(25deg);
 
@@ -111,9 +115,10 @@
       justify-content: center;
       align-items: center;
       @include breakpoint(tablet) {
+        padding-top: 5px;
         font-size: 32px;
 
-        padding-left: 20px;
+        padding-left: 7px;
       }
     }
     &__2 {

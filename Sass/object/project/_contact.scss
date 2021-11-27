@@ -1,6 +1,6 @@
 .p-contact {
   // background-color: $base-color;
-  background-image: url(/image/bckground-image-contact.png);
+  background-image: url(../image/bckground-image-contact.png);
   background-position: center;
   background-size: cover;
   padding-bottom: 96px;
@@ -42,14 +42,14 @@
       position: relative;
       font-size: 20px;
       color: #fff;
-      font-family: "Noto Sans JP ";
+      font-family: "Noto Sans JP";
       @include breakpoint(tablet) {
         font-size: 24px;
       }
     }
   }
   p {
-    font-family: "Noto Sans JP ";
+    font-family: "Noto Sans JP";
     font-size: 16px;
     line-height: 2;
     color: #fff;
@@ -82,7 +82,7 @@
     }
   }
   .c-button {
-    font-family: "Noto Sans JP ";
+    font-family: "Noto Sans JP";
     background-color: #b8614b;
     width: 345px;
     margin: 24px auto 0 auto;
@@ -106,7 +106,7 @@
     }
   }
   .c-button__2 {
-    font-family: "Noto Sans JP ";
+    font-family: "Noto Sans JP";
     background-color: $text-color;
     width: 345px;
     margin: 24px auto 0 auto;

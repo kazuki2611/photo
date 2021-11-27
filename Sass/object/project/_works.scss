@@ -2,6 +2,7 @@
   @extend.p-service;
   display: block;
   justify-content: center;
+  padding-left: 0;
   @include breakpoint (tablet) {
     margin-top: 130px;
   }
@@ -22,6 +23,7 @@
   &__wrap {
     // @extend.p-service__wrap;
     padding-top: 32px;
+   
 
     // .c-text {
     //   // margin-top: 24px;
@@ -78,7 +80,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 40px;
+      gap: 7%;
+      padding: 0 20px;
     }
   }
   &__box {
@@ -146,7 +149,7 @@
     h5 {
       color: #b8614b;
       font-size: 20px;
-      font-family: "Noto Sans JP ";
+      font-family: "Noto Sans JP";
       padding-left: 20px;
       margin-top: 22px;
       position: relative;
@@ -154,12 +157,15 @@
       @include breakpoint (tablet) {
        font-size: 24px;
        padding-left: 24px;
-       margin-top: 32px;
+       margin-top: 24px;
+      }
+      @include breakpoint (pc) {
+        margin-top: 32px;
       }
     }
     .c-text {
       font-size: 16px;
-      font-family: "Noto Sans JP ";
+      font-family: "Noto Sans JP";
       color: $text-color;
       padding-left: 24px;
       text-align: left;

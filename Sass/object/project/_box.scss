@@ -6,7 +6,7 @@
   top: 80%;
   left: 23px;
   display: block;
-  font-family: "Noto Sans JP ";
+  font-family: "Noto Sans JP";
   // padding: 0 20px;
   //  width: 500px;
   max-width: 375px;
@@ -42,6 +42,9 @@
     }
     @include breakpoint(tablet) {
       width: 15%;
+      padding-left: 25px;
+    }
+    @include breakpoint (pc) {
       padding-left: 40px;
     }
   }
